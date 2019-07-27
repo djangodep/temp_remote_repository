@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Calculator</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        form{
+            background-color: darkkhaki;
+        }
+        body{
+            background-color: darkgrey;
+        }
+        .btn{
+            margin-left: 10px;
+        }
+        {#h1{#}
+        {#    text-align: center;font-size: 40px;font-family: cursive;color: red;#}
+        {#}#}
+
+        h2{
+            background-color: darkgoldenrod;
+            font-family:cursive;
+            text-shadow:5px 5px 5px #ff8927;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="rows">
+        <div class="offset-md-2 col-md-8">
+            <div class="jumbotron text-center">
+            <h2 class="text-center text-uppercase">Calculator</h2>
+            {% csrf_token %}
+            <form method="get" action="./Calculation_app/new_output">
+
+                <center>
+                    <b>Enter First Number:</b><input type="text" name="t1" class="form-control"><br><br>
+                    <b>Enter Second Number:</b><input type="text" name="t2" class="form-control"><br><br>
+                </center>
+
+                <center>
+                <input type="submit" value="Add" name="but" class="btn btn-success">
+                <input type="submit" value="Sub" name="but" class="btn btn-success">
+                <input type="submit" value="Mul" name="but" class="btn btn-success">
+                <input type="submit" value="Div" name="but" class="btn btn-success">
+                </center>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
